@@ -1,0 +1,105 @@
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name="theme-color" content="#ff9800")
+		meta(name="msapplication-navbutton-color" content="#ff9800")
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+		meta(name="apple-touch-fullscreen" content="yes")
+		link(rel="icon" type="image/x-icon" sizes="16x16" href="#")
+		link(rel="icon" type="image/x-icon" sizes="32x32" href="#")
+		link(rel="icon" type="image/png" sizes="50x50" href="#")
+		link(rel="icon" type="image/png" sizes="60x60" href="#")
+		link(rel="icon" type="image/png" sizes="72x72" href="#")
+		link(rel="icon" type="image/png" sizes="76x76" href="#")
+		link(rel="icon" type="image/png" sizes="114x114" href="#")
+		link(rel="icon" type="image/png" sizes="120x120" href="#")
+		link(rel="icon" type="image/png" sizes="144x144" href="#")
+		link(rel="icon" type="image/png" sizes="152x152" href="#")
+		meta(name="format-detection" content="telephone=no")
+		title
+		link(rel="stylesheet" href="static/css/main.css")
+	body
+		svg(style="display:none")
+			symbol(id="portion" viewBox="0 0 23 19" width="12" height="12")
+				g(fill-rule="evenodd")
+					path(d="M3 7.96c0 .02-.02.04-.046.04h17.092C20.02 8 20 7.98 20 7.96c-.001 4.426-3.81 8.04-8.5 8.04C6.807 16 3 12.386 3 7.96zm18 0a.957.957 0 0 0-.954-.96H2.954A.956.956 0 0 0 2 7.96C2 12.95 6.267 17 11.5 17c5.232 0 9.499-4.05 9.5-9.04zM18.598 19H4.403C4.181 19 4 18.776 4 18.5s.18-.5.403-.5h14.194c.222 0 .403.224.403.5s-.18.5-.402.5zm4.06-10h-1.317C21.153 9 21 8.776 21 8.5s.153-.5.341-.5h1.318c.188 0 .341.224.341.5s-.153.5-.341.5zm-21 0H.342C.153 9 0 8.776 0 8.5S.153 8 .341 8H1.66c.188 0 .341.224.341.5s-.153.5-.341.5z")
+					rect(width="1" height="6" x="11" rx=".5")
+					rect(width="1" height="3" x="8" y="3" rx=".5")
+					rect(width="1" height="3" x="14" y="3" rx=".5")
+			symbol(id="timer" viewBox="0 0 42 49" width="12" height="12")
+				path(d="M42 28c0 11.598-9.402 21-21 21S0 39.598 0 28 9.402 7 21 7s21 9.402 21 21zM21 9C10.507 9 2 17.507 2 28s8.507 19 19 19 19-8.507 19-19S31.493 9 21 9zm0 21a1.994 1.994 0 1 1-1-3.723V14.999h2v11.279c.595.346 1 .984 1 1.722a2 2 0 0 1-2 2zM20 2h-3V0h8v2h-3v5h-2V2z")
+		header#header.page-header
+			.wrapper
+				.page-header__row
+					.page-header__logo
+						a(href="index.html")
+							img(src="static/img/logo.png", alt="")
+					form.page-header__form
+						input.form-input(type="text" placeholder="Найти рецепт...")
+						.page-header__form-btn
+							button.btn.btn--search(type="button")
+								.circle
+									span.icon.arrow
+									p.btn-text Найти рецепт
+		.main-page-wrap
+			.main-page-blocks
+				section.cook-block
+					.wrapper
+						.cook-block__container
+							.cook-block__heading
+								.cook-block__category
+									a(href="#") Сэндвичи
+									a(href="#") Выпечка и десерты
+								.cook-block__title
+									h3 Французские тосты с яблоками
+								.cook-block__inner-info
+									.cook-block__portion
+										span 1 порция
+										svg(width="20" height="20")
+											use(xlink:href="#portion")
+									.cook-block__time
+										span 10 минут
+										svg(width="20" height="20")
+											use(xlink:href="#timer")
+							.cook-block__photo-block
+								img(src="static/img/cook-photo-recept-1.jpg", alt="")
+							.cook-block__author-block
+								span Автор рецепта
+								.cook-block__author-body
+									.cook-block__author-photo
+										img(src="static/img/volodimir.jpg", alt="")
+									.cook-block__author-info
+										h3 Автор: Вовочка Подлесный
+										span 2248 рецептов
+								.cook-block__author-sub
+									a(href="#") Подписаться
+							.cook-block__value-block
+								h3 Энергетическая ценность на порцию
+								.cook-block__value-list
+									.cook-block__value-option
+										span Калорийность
+										.cook-block__value-num
+											b 982
+											span Ккал
+									.cook-block__value-option
+										span Белки
+										.cook-block__value-num
+											b 14,8
+											span Ккал
+									.cook-block__value-option
+										span Жиры
+										.cook-block__value-num
+											b 68,9
+											span Ккал
+									.cook-block__value-option
+										span Углеводы
+										.cook-block__value-num
+											b 77,4
+											span Ккал
+	script(src="static/js/jquery-3.3.1.min.js")
+	script(src="static/js/nice-select.min.js")
+	script(src="static/js/main.js")
