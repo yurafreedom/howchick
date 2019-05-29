@@ -1,0 +1,255 @@
+.cook-block {
+	&__container {
+		width: 100%;
+	}
+	&__heading {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		margin-top: 70px;
+		margin-bottom: 30px;
+	}
+	&__category {
+		display: flex;
+		margin-bottom: 20px;
+		justify-content: center;
+	}
+	&__category a {
+		position: relative;
+		display: block;
+		font-size: 9px;
+		text-transform: uppercase;
+		color: #24af30;
+		transition: all .3s ease-in-out;
+		&:hover {
+			color: lighten(#24af30, 15%);
+		}
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+		&:not(:last-child)::after {
+			content: '';
+			position: absolute;
+			top: 2px;
+			right: -10px;
+			width: 3px;
+			height: 3px;
+			border-radius: 50%;
+			background-color: #24af30;
+		}
+	}
+	&__title {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		margin-bottom: 35px;
+		font-size: 50px;
+		font-weight: 900;
+	}
+	&__inner-info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__portion {
+		display: flex;
+		align-items: center;
+		margin-right: 15px;
+	}
+	&__portion span, &__time span {
+		padding-right: 10px;
+	}
+	&__time {
+		display: flex;
+		align-items: center;
+	}
+	&__photo-block {
+		display: block;
+		width: 620px;
+		height: 415px;
+		margin: 0 auto;
+		margin-bottom: 60px;
+	}
+	&__photo-block img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+		backface-visibility: hidden;
+	}
+	&__value-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__value-block h3 {
+		display: block;
+		text-align: center;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: 1px;
+	}
+	&__value-list {
+		display: flex;
+		flex-direction: row;
+	}
+	&__value-option {
+		padding: 10px 45px 38px;
+	}
+	&__value-option span {
+		display: block;
+		text-align: center;
+		font-size: 8px;
+		line-height: 23px;
+		letter-spacing: .1em;
+		margin-bottom: 15px;
+	}
+	&__value-num {
+		display: flex;
+		flex-direction: column;
+	}
+	&__value-num b {
+		display: block;
+		text-align: center;
+		font-size: 15px;
+	}
+	&__value-num span {
+		display: block;
+		font-size: 8px;
+		line-height: 23px;
+		letter-spacing: .1em;
+	}
+	&__ingredients-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__ingredients-block h3 {
+		display: block;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 1px;
+	}
+	&__ingredients-list {
+		display: block;
+		width: 620px;
+	}
+	&__ingredients-option {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 14px;
+		line-height: 23px;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			bottom: 16px;
+			border-bottom: 1px solid #b8b8b8;
+		}
+	}
+	&__instruction-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 60px;
+	}
+	&__instruction-block h3 {
+		display: block;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: 1px;
+		margin-bottom: 60px;
+	}
+	&__instruction-list {
+		display: flex;
+		flex-direction: column;
+	}
+	&__instruction-step {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+	&__instruction-photo {
+		display: block;
+		width: 434px;
+		height: 295px;
+		margin-right: 40px;
+	}
+	&__instruction-photo img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+		backface-visibility: hidden;
+	}
+	&__instruction-article {
+		width: 442px;
+		display: flex;
+	}
+	&__instruction-article b {
+		padding-right: 30px;
+	}
+	&__instruction-article p {
+		display: block;
+		margin: 0;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.cook-block {
+		&__title {
+			font-size: 24px;
+		}
+		&__photo-block, &__instruction-photo, &__instruction-article, &__ingredients-list {
+			width: 100%;
+		}
+		&__value-list {
+			flex-wrap: wrap;
+		}
+		&__value-option {
+			padding: 0;
+			width: 60px;
+		}
+		&__instruction-step {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__instruction-photo {
+			margin-right: 0;
+			margin-bottom: 40px;
+		}
+		&__instruction-step:not(:last-child) {
+			margin-right: 0;
+		}
+		&__instruction-article b {
+			padding-right: 10px;
+		}		
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.cook-block {
+		&__title {
+			font-size: 35px;
+		}
+		&__instruction-photo {
+			width: 300px;
+		}
+		&__instruction-article {
+			width: 300px;
+		}
+	}
+}
